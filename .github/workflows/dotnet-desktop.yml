@@ -25,11 +25,11 @@ jobs:
         restore-keys: |
           ${{ runner.os }}-nuget
     - name: Restore dependencies
-      working-directory: ./WorkshopTests
+      working-directory: WorkshopTests
       run: dotnet restore
     - name: Build
-      working-directory: ./WorkshopTests
+      working-directory: WorkshopTests
       run: dotnet build --no-restore
     - name: Test
-      working-directory: ./WorkshopTests
+      working-directory: WorkshopTests
       run: dotnet test --no-build --verbosity normal
